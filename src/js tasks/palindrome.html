@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    var admin = (example) => {this.example = example};
+admin.prototype.palindrome = () => {
+    var flag = true;
+    for(var i=0, j=this.example.length; i < this.example.length, j>0; i++,j--){
+        if(this.example[i]===this.example[j]){
+            continue;
+        } else {
+            flag=false;
+            break;
+        }
+    }
+    if(flag){
+        console.log("Palindrome");
+    } else {
+        console.log('Not a palindrome');
+    }
+}
+
+let ADMIN = new admin("abracadabra");
+ADMIN.palindrome();
+</script>
+</html>
